@@ -1,0 +1,31 @@
+<mat-toolbar color="accent">
+    <a
+[routerLink]="''"
+    mat-icon-button
+    class="example-icon "
+    aria-label="Example icon-button with menu icon"
+    >
+    <mat-icon>menu_book</mat-icon>
+    </a>
+   <span>MENTORkart</span>
+   <span class="example-spacer"></span>
+   
+   <button *ngIf="!isLoggedIn"  window.location.href="../../pages/login" mat-button>
+    login
+  </button>
+
+  <a
+  [routerLink]="'/globalsignup'"
+      mat-icon-button
+      class="example-icon favorite-icon mr20 ml20 "
+      aria-label="Example icon-button with heart icon"
+      >
+     
+      SignUp
+      </a>
+
+    <button (click)="logout()" *ngIf="isLoggedIn" mat-button>
+        logout
+      </button>
+   
+ </mat-toolbar>
