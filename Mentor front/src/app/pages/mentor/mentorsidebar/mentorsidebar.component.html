@@ -1,0 +1,19 @@
+<mat-card>
+    <mat-action-list>
+        <div mat-subheader>Menu</div>
+        <button routerLink="/mentor" mat-list-item>
+            <mat-icon mat-list-icon>dvr</mat-icon> Display Mentee
+        </button>
+        <!-- <button mat-list-item routerLink="/mentor/mentorprofile"> -->
+        <button mat-list-item (click)="mentorProfile()">
+
+            <mat-icon mat-list-icon>account_circle</mat-icon> Mentor-Profile
+        </button>
+        <button mat-list-item routerLink="/mentor/addmentee">
+            <mat-icon mat-list-icon>person_add</mat-icon> Add-Mentee
+        </button>
+        <button mat-list-item routerLink="/mentor/updatefees">
+            <mat-icon mat-list-icon>account_balance_wallet</mat-icon> Update-Fees
+        </button>
+    </mat-action-list>
+</mat-card>

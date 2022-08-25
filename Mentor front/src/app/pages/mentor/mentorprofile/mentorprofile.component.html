@@ -1,0 +1,115 @@
+<mat-card *ngIf="mentor">
+    <h1>Your Profile Details</h1>
+    {{mentor | json}}
+    <mat-card-content>
+        <div class="bootstrap-wrapper">
+            <div class="container">
+                <div class="container text-center">
+                    <img src="../../../../assets/profileimage.png" alt="" class="profile-image">
+                    <h1 class="mt20" >{{mentor.firstName}}  {{mentor.lastName}}</h1>
+                </div>
+                <div class="row">
+                    <div class="col-md-10 offset-md-1">
+                        <table class="table text-center">
+                            <tr *ngIf="mentor.id">
+                                <td>id</td>
+                                <td>{{mentor.id}}</td>
+                            </tr>
+                            <tr *ngIf="mentor.addressDetail.addLine1">
+                                <td>addressLine1</td>
+                                <td>{{mentor.addressDetail.addLine1}}</td>
+                            </tr>
+                            <tr *ngIf="mentor.addressDetail.addLine2"> 
+                                <td>addressLine2</td>
+                                <td>{{mentor.addressDetail.addLine2}}</td>
+                            </tr>
+                            <tr>
+                                <td>district</td>
+                                <td>{{mentor.addressDetail.district}}</td>
+                            </tr>
+                            <tr>
+                                <td>state</td>
+                                <td>{{mentor.addressDetail.state}}</td>
+                            </tr>
+                            <tr>
+                                <td>pin</td>
+                                <td>{{mentor.addressDetail.pin}}</td>
+                            </tr>
+                            <tr>
+                                <td>company1</td>
+                                <td>{{mentor.companies.company1}}</td>
+                            </tr>
+                            <tr>
+                                <td>company2</td>
+                                <td>{{mentor.companies.company2}}</td>
+                            </tr>
+                            <tr>
+                                <td>company3</td>
+                                <td>{{mentor.companies.company3}}</td>
+                            </tr>
+                            <tr>
+                                <td>company4</td>
+                                <td>{{mentor.companies.company4}}</td>
+                            </tr>
+                            <tr>
+                                <td>skill1</td>
+                                <td>{{mentor.currentskills.skill1}}</td>
+                            </tr>
+                            <tr>
+                                <td>skill2</td>
+                                <td>{{mentor.currentskills.skill2}}</td>
+                            </tr>
+                            <tr>
+                                <td>skill3</td>
+                                <td>{{mentor.currentskills.skill3}}</td>
+                            </tr>
+                            <tr>
+                                <td>skill4</td>
+                                <td>{{mentor.currentskills.skill4}}</td>
+                            </tr>
+                            <tr>
+                                <td>email</td>
+                                <td>{{mentor.email}}</td>
+                            </tr>
+                            <tr>
+                                <td>phoneNumber</td>
+                                <td>{{mentor.phoneNumber}}</td>
+                            </tr>
+                            <tr>
+                                <td>gender</td>
+                                <td>{{mentor.gender}}</td>
+                            </tr>
+                            <tr>
+                                <td>balance</td>
+                                <td>{{mentor.balance}}</td>
+                            </tr>
+                            <tr>
+                                <td>age</td>
+                                <td>{{mentor.age}}</td>
+                            </tr>
+                            <tr>
+                                <td>yearOfExperience</td>
+                                <td>{{mentor.yearOfExperience}}</td>
+                            </tr>
+                            <tr>
+                                <td>Fees</td>
+                                <td>{{mentor.fees}}</td>
+                            </tr>
+                            
+                        </table>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </mat-card-content>
+    <mat-card-actions class="text-center">
+        <button (click)="redirecttoupdate()" mat-raised-button color="primary">UPDATE</button>
+        &nbsp;
+        &nbsp;
+        <button (click)="delete()" mat-raised-button color="primary">DELETE</button>
+        </mat-card-actions>
+        
+</mat-card>

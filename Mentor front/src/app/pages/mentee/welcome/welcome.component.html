@@ -1,0 +1,56 @@
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  
+  <!-- firstName Column -->
+  <ng-container matColumnDef="firstName">
+    <th mat-header-cell *matHeaderCellDef> FirstName</th>
+    <td mat-cell *matCellDef="let element"> {{element.firstName}} </td>
+  </ng-container>
+
+  <!-- lastName Column -->
+  <ng-container matColumnDef="lastName">
+    <th mat-header-cell *matHeaderCellDef> LastName </th>
+    <td mat-cell *matCellDef="let element"> {{element.lastName}} </td>
+  </ng-container>
+
+  <!-- Email Column -->
+  <ng-container matColumnDef="email">
+    <th mat-header-cell *matHeaderCellDef> Email </th>
+    <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+  </ng-container>
+
+  <!-- ProfileLink Column -->
+  <ng-container matColumnDef="action1">
+    <th mat-header-cell *matHeaderCellDef> Action1 </th>
+    <td mat-cell *matCellDef="let element"> 
+      <button mat-raised-button color="primary" [routerLink]="['/viewmentorprofile', element.id]">
+        VIEW PROFILE
+    </button>
+    </td>
+  </ng-container>
+
+  <!-- DeleteMentor from my mentee list Column -->
+  <ng-container matColumnDef="action2">
+    <th mat-header-cell *matHeaderCellDef> Action2 </th>
+    <td mat-cell *matCellDef="let element"> 
+      <button (click)="deletementor(element.id)" mat-raised-button color="primary" >
+        Delete Mentor From Mentee List
+    </button>
+    </td>
+  </ng-container>
+
+  <!-- <ng-container matColumnDef="action">
+      <th mat-header-cell *matHeaderCellDef> Action </th>
+      <td mat-cell *matCellDef="let element"> 
+          
+
+          <button (click)="delete(element.id)" mat-raised-button color="accent">
+              DELETE
+          </button>
+      </td>
+    </ng-container> -->
+
+   
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

@@ -1,0 +1,136 @@
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="row" >
+            <div class="col-md-6 offset-md-3">
+                <mat-card>
+                <div class="container text-center">
+                    <img src="../../../assets/mentorlogo.png" alt="" />
+                    
+                </div>
+                <h1 class="text-center">UPDATE Here !!</h1>
+
+                   <!-- {{mentee | json}} -->
+
+                <form >
+
+
+                      <!-- first name -->
+                     <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>First Name</mat-label>
+                        <input required [(ngModel)] = "mentee.firstName" name="firstName" type ="text" matInput placeholder="enter here" />
+                      </mat-form-field>
+
+                       <!-- last name -->
+                     <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Last Name</mat-label>
+                        <input required [(ngModel)] = "mentee.lastName" name="lastName" type ="text" matInput placeholder="enter here" />
+                      </mat-form-field>
+
+                      <!-- address line 1  -->
+                     <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Adreess Line 1</mat-label>
+                        <input required [(ngModel)] = "mentee.addLine1" name="addLine1" type ="text" matInput placeholder="enter here" />
+                      </mat-form-field>
+
+                       <!-- address line 2  -->
+                     <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Adreess Line 2</mat-label>
+                        <input required [(ngModel)] = "mentee.addLine2" name="addLine2" type ="text" matInput placeholder="enter here" />
+                      </mat-form-field>
+
+                      <!-- district -->
+                     <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>District</mat-label>
+                        <input required [(ngModel)] = "mentee.district" name="district" type ="text" matInput placeholder="enter here" />
+                      </mat-form-field>
+
+                      <!-- state -->
+                     <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>State</mat-label>
+                        <input required [(ngModel)] = "mentee.state" name="state" type ="text" matInput placeholder="enter here" />
+                      </mat-form-field>
+
+                       <!-- pin -->
+                     <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Pin</mat-label>
+                        <input required [(ngModel)] = "mentee.pin" name="pin" type ="text" matInput placeholder="enter here" />
+                      </mat-form-field>
+
+                        <!-- skill1 -->
+                     <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Skill 1</mat-label>
+                        <input required [(ngModel)] = "mentee.skill1" name="skill1" type ="text" matInput placeholder="enter here" />
+                      </mat-form-field>
+
+                         <!-- skill2 -->
+                     <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Skill 2</mat-label>
+                        <input required [(ngModel)] = "mentee.skill2" name="skill2" type ="text" matInput placeholder="enter here" />
+                      </mat-form-field>
+
+                         <!-- skill3 -->
+                     <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Skill 3</mat-label>
+                        <input required [(ngModel)] = "mentee.skill3" name="skill3" type ="text" matInput placeholder="enter here" />
+                      </mat-form-field>
+
+                         <!-- skill4 -->
+                     <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Skill 4</mat-label>
+                        <input required [(ngModel)] = "mentee.skill4" name="skill4" type ="text" matInput placeholder="enter here" />
+                      </mat-form-field>
+
+                       <!-- email -->
+                     <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Email</mat-label>
+                        <input required [(ngModel)] = "mentee.email" name="email" type ="email" matInput placeholder="enter here" />
+                        <mat-hint>Email must be unique !!</mat-hint>
+                      </mat-form-field>
+
+                      <!-- phone number -->
+                     <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Phone Number</mat-label>
+                        <input required [(ngModel)] = "mentee.phoneNumber" name="phoneNumber" type ="text" matInput placeholder="enter here" />
+                        <mat-hint>phoneNumber must be unique !!</mat-hint>
+                      </mat-form-field>
+
+                       <!-- Gender -->
+                     <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Gender</mat-label>
+                        <input required [(ngModel)] = "mentee.gender" name="gender" type ="text" matInput placeholder="enter here" />
+                      </mat-form-field>
+
+                      <!-- Balance -->
+                     <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Balance</mat-label>
+                        <input required [(ngModel)] = "mentee.balance" name="balance" type ="number" matInput placeholder="enter here" />
+                      </mat-form-field>
+
+                       <!-- Age-->
+                     <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Age</mat-label>
+                        <input required [(ngModel)] = "mentee.age" name="age" type ="number" matInput placeholder="enter here" />
+                      </mat-form-field>
+
+                      <!-- type -->
+                      <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Type</mat-label>
+                        <input required [(ngModel)] = "mentee.type" name="type" type ="text" matInput placeholder="enter here" />
+                      </mat-form-field>
+
+                      <div class="container text-center">
+                          <button (click)="dochange()" type="submit" mat-raised-button color="primary">Submit</button>
+                       </div>
+                       <br>
+                       <br>
+
+           
+
+
+                      
+                </form>
+            </mat-card>
+             </div>
+         </div>
+    </div>
+ </div>

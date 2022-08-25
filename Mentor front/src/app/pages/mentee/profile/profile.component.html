@@ -1,0 +1,86 @@
+<mat-card *ngIf="mentee" class="bg">
+    <h1>Your Profile Details</h1>
+    {{mentee | json}}
+    <mat-card-content>
+        <div class="bootstrap-wrapper" class="bg">
+            <div class="container">
+                <div class="container text-center">
+                    <img src="../../../../assets/profileimage.png" alt="" class="profile-image">
+                    <h1 class="mt20" >{{mentee.firstName}}  {{mentee.lastName}}</h1>
+                </div>
+                <div class="row">
+                    <div class="col-md-10 offset-md-1">
+                        <table class="table text-center">
+                            <tr *ngIf="mentee.id">
+                                <td>id</td>
+                                <td>{{mentee.id}}</td>
+                            </tr>
+                            <tr *ngIf="mentee.addressDetail.addLine1">
+                                <td>addressLine1</td>
+                                <td>{{mentee.addressDetail.addLine1}}</td>
+                            </tr>
+                            <tr *ngIf="mentee.addressDetail.addLine2"> 
+                                <td>addressLine2</td>
+                                <td>{{mentee.addressDetail.addLine2}}</td>
+                            </tr>
+                            <tr>
+                                <td>district</td>
+                                <td>{{mentee.addressDetail.district}}</td>
+                            </tr>
+                            <tr>
+                                <td>state</td>
+                                <td>{{mentee.addressDetail.state}}</td>
+                            </tr>
+                            <tr>
+                                <td>pin</td>
+                                <td>{{mentee.addressDetail.pin}}</td>
+                            </tr>
+                            <tr>
+                                <td>skill1</td>
+                                <td>{{mentee.currentskills.skill1}}</td>
+                            </tr>
+                            <tr>
+                                <td>skill2</td>
+                                <td>{{mentee.currentskills.skill2}}</td>
+                            </tr>
+                            <tr>
+                                <td>skill3</td>
+                                <td>{{mentee.currentskills.skill3}}</td>
+                            </tr>
+                            <tr>
+                                <td>skill4</td>
+                                <td>{{mentee.currentskills.skill4}}</td>
+                            </tr>
+                            <tr>
+                                <td>email</td>
+                                <td>{{mentee.email}}</td>
+                            </tr>
+                            <tr>
+                                <td>phoneNumber</td>
+                                <td>{{mentee.phoneNumber}}</td>
+                            </tr>
+                            <tr>
+                                <td>gender</td>
+                                <td>{{mentee.gender}}</td>
+                            </tr>
+                            <tr>
+                                <td>type</td>
+                                <td>{{mentee.type}}</td>
+                            </tr>
+                        </table>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </mat-card-content>
+    <mat-card-actions class="text-center">
+        <button (click)="redirecttoupdate()" mat-raised-button color="primary">UPDATE</button>
+        &nbsp;
+        &nbsp;
+        <button (click)="delete()" mat-raised-button color="primary">DELETE</button>
+        </mat-card-actions>
+        
+</mat-card>

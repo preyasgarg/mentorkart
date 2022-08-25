@@ -1,0 +1,18 @@
+<body class = "div-3">
+<div class="center" >
+<label id="example-radio-group-label" class="bolded">Choose one from mentor or mentor to signup</label>
+<br>
+<mat-radio-group
+  aria-labelledby="example-radio-group-label"
+  class="example-radio-group"
+  class="centers"
+  [(ngModel)]="selectedoption">
+  <mat-radio-button  class="centers" class="example-radio-button" *ngFor="let option of options" [value]="option">
+    {{option}}
+  </mat-radio-button>
+</mat-radio-group>
+<div class="bolded">Your choosen option is: {{selectedoption}} </div>
+
+<button (click)="redirection()" mat-raised-button  color="accent">submit</button>
+</div>
+</body>
